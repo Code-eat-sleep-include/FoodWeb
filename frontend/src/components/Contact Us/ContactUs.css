@@ -1,0 +1,128 @@
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    max-width: 500px;
+    width: 100%;
+    height: 640px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contactbutton {
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #a72f03;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contactbutton:hover {
+    background-color: #981e08;
+    box-shadow: 0 4px 10px rgba(108, 19, 3, 0.4);
+}
+
+.input_text {
+    color: black;
+}
+
+.contact-container::before {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(102, 149, 250, 0.564), rgba(112, 160, 249, 0.3));
+    border-radius: 50%;
+    animation: floatBlob 5s infinite linear;
+    opacity: 0.7;
+    transition: clip-path 10s ease-in-out;
+}
+
+@keyframes floatBlob {
+    0% {
+        transform: scale(1);
+        top: calc(10% + (80% * random())); 
+        left: calc(10% + (80% * random())); 
+        clip-path: circle(50%);
+    }
+    25% {
+        transform: scale(1.1);
+        top: calc(15% + (70% * random()));
+        left: calc(15% + (70% * random()));
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    50% {
+        transform: scale(0.9);
+        top: calc(5% + (90% * random()));
+        left: calc(5% + (90% * random()));
+        clip-path: circle(50%);
+    }
+    75% {
+        transform: scale(1.05);
+        top: calc(20% + (60% * random()));
+        left: calc(20% + (60% * random()));
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    100% {
+        transform: scale(1);
+        top: calc(10% + (80% * random()));
+        left: calc(10% + (80% * random()));
+        clip-path: circle(50%);
+    }
+}
