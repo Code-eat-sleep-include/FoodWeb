@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&display=swap');
+.contents {
+    padding-top: 0;
+    box-sizing: border-box;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    flex-grow: 1;
+}
+
+.website-name {
+    font-size: 2.2rem;
+    color: #333;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+.other-navs {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none !important;
+    position: relative;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.other-navs:hover {
+    color: white;
+}
+
+.other-navs:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    background-color: white;
+}
+
+.others {
+    display: flex;
+    gap: 30px;
+
+}
+
+.logo-container {
+    align-items: center;
+    gap: 0;
+    display: flex;
+}
+
+.logoo {
+    margin-top: -18px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+}
